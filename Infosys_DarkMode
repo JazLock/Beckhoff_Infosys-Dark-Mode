@@ -1,0 +1,84 @@
+@-moz-document url-prefix("infosys.beckhoff.com") {
+/* ==UserStyle==
+@name           Infosys DarkMode
+@namespace      USO Archive
+@author         Jazz Blacklock
+@description    `Quick dark theme for Infosys.`
+@version        2022.08.25_R1
+@license        MIT
+@preprocessor   uso
+==/UserStyle== */
+}
+
+@-moz-document domain("infosys.beckhoff.com") {
+html {
+    filter: invert(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    /*background: #4A; #6C6B6B*/
+    color: #FFFFFF;
+    
+   }
+
+/*header Color*/
+/*h1, h2, h3, h4, h5, h6{Color: #FFFFFF}*/
+h1, h2, h3, h4, h5, h6{filter: invert(100%); text-shadow: 2px 1px 2px #FFF}
+p, tr p, td p{color: #FFF;}  /* background-color: #4B4A4A8C - Removed to clean up */
+dd,dl,d1,dt,u{color:#FFF}
+u{color:#FFF}
+
+body {
+    background: #4A4B4A;
+    }
+
+.Gen1c413f61210f4ef88a82bf1e0888693f, .CrossReferenceTitle, .Gen981375c56c8644fdb35fa53da099f801, .ExternalReferenceTitle {color:#FFF} /*Catches specific header from TwinCAT3->TE1000XAE*/
+
+.runninghead {Color:#FFF; background: #4A4B4ABF}
+
+p.safety-consequence{background : #4B4A4A8C}
+
+
+
+span[role="img"] {
+    filter: invert(0%) hue-rotate(0deg) brightness(100%) contrast(100%);    }
+
+ol.breadcrumb {background: #B2AEAEA3 }
+ol.breadcrumb > li > a, .beckhoff-runninghead-brand {color:#42ECFF} /*Catches Title bar of TE2000 which is a link*/
+ 
+br {color:#fff}
+
+a.baum:link{color:#FFF; text-shadow: 2px 1px 2px #1A1A1AED } /*Catches Menu Links*/
+a.baum:visited {Color:#FF1414 ; text-shadow: 2px 2px #1A1A1AED}
+
+div.linklist-title {color: #FFF; text-shadow: 2px 1px 2px #1A1A1AED} /* Number lists in tables*/
+
+.list-in-table, .numlist-in-table, .lv2-list {color:#FFF}
+
+img, svg, iframe, .emoji-common-emoji-sprite {
+    filter: invert(0%) hue-rotate(0deg) brightness(100%) contrast(100%); }
+
+/* tables */
+td {background: #4B4A4A8C}
+td.info-content {background : #4B4A4AA3}
+
+/* Info indicator table*/
+td.col-safety-pictogram.info-symbol{background:#FFF ; Filter: invert(100%) brightness(70%)}
+.safety-symbol-infobox{background: #fff}
+
+th {background: #6B6969; }
+ul {color : #DA982D}
+
+/*Text from Lefthand Frame*/
+a {color: #FFF}
+
+figure > figcaption {color:#B8B5B5} /*Catches Figure italic text*/
+
+a.beckhoff-runninghead-brand:visited{color:#FFF} /*Catches Title on beckhoff-runninghead-brand*/
+
+ol.breadcrumb, .beckhoff-runninghead {background: #6C6B6B}/*Catches background for beckhoff-runninghead-brand box*/
+
+/*p { font-family: font-family: Arial, Helvetica, sans-serif; margin-bottom: 0.6em; margin-top: -0.01pt; } */  
+.safetycell  { border-bottom: solid 1px #000 !important; border-left: none 0px !important; border-right: none 0px !important; border-top: solid 1px #000 !important; background-color: grey  }
+
+.safety-symbol-infobox { border: none 0px !important; padding-top: 5px; text-align: center; width: 1.6cm !important; 
+                            Filter: invert(100%) hue-rotate(180deg)    }
+
+}
